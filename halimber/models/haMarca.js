@@ -7,7 +7,8 @@ module.exports = function(sequelize, DataTypes) {
 }, {
 	tableName: 'ha_marca',
 	classMethods: {
-		associate: function(models) {
+		associate: function(models) { 
+			Model.hasMany(models.haProducto,{as:'haProducto', foreignKey:'ha_marca_id'})
 		}
 	},
 	instanceMethods:{

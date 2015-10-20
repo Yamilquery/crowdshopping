@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
 	tableName: 'ha_producto',
 	classMethods: {
 		associate: function(models) {
+			Model.belongsTo(models.haMarca,{as:'haMarca', foreignKey:'ha_marca_id'})
 		}
 	},
 	instanceMethods:{
